@@ -1,19 +1,25 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
-  },
-  "keywords": [],
-  "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "2.5.4",
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
-    "husky": "^9.1.7",
-    "typescript": "^7.0.2"
-  }
+	"name": "template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,md}": [
+			"biome check --write"
+		]
+	},
+	"keywords": [],
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.4",
+		"@commitlint/cli": "^21.2.1",
+		"@commitlint/config-conventional": "^21.2.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.1.0",
+		"typescript": "^7.0.2"
+	}
 }

@@ -4,3 +4,5 @@ else
   echo "🚫 gitleaks is not installed, please install it to enhance security."
   exit 1
 fi
+
+./node_modules/.bin/lint-staged
